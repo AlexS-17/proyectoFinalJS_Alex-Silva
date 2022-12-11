@@ -114,14 +114,14 @@ function iniciarApp() {
         modalTitle.textContent = strMeal;
         modalBody.innerHTML = `
             <img class="img-fluid" src="${strMealThumb}" alt="receta ${strMeal}" />
-            <h3 class="my-3">Instrucciones</h3>
+            <h3 class="my-3">Preparación</h3>
             <p>${strInstructions}</p>
-            <h3 class="my-3">Ingredientes y Cantidades</h3>
+            <h3 class="my-3">Ingredientes y medidas</h3>
         `;
 
         const listGroup = document.createElement('UL');
         listGroup.classList.add('list-group');
-        // Mostrar cantidades e ingredientes
+        // Mostrar ingredientes y medidas
         for(let i = 1; i <= 20; i++ ) {
             if(receta[`strIngredient${i}`]) {
                 const ingrediente = receta[`strIngredient${i}`];
